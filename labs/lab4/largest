@@ -1,0 +1,10 @@
+10868 /usr/lib/udev/hwdb.bin
+12088 /usr/lib/modules/5.15.0-58-generic/kernel/drivers/gpu/drm/amd/amdgpu/amdgpu.ko
+13368 /usr/lib/firmware/mrvl/prestera/mvsw_prestera_fw-v2.0.img
+13400 /usr/lib/firmware/mrvl/prestera/mvsw_prestera_fw-v3.0.img
+14616 /usr/lib/firmware/mrvl/prestera/mvsw_prestera_fw-v4.0.img
+15112 /usr/bin/snap
+15156 /usr/lib/firmware/qcom/sm8250/adsp.mbn
+19704 /usr/lib/snapd/snapd
+19956 /usr/lib/firmware/liquidio/lio_23xx_vsw.bin
+28784 /usr/lib/aarch64-linux-gnu/libicudata.so.70.1
