@@ -27,8 +27,7 @@ int main(){
 				if(pipe(fds) < 0) err("bad pipe", 1);
 				thisO = fds[1];
 				nextI = fds[0];
-			}
-			if(cmd -> outfile){
+			}else if(cmd -> outfile){
 				thisO = open(cmd -> outfile, O_WRONLY | O_CREAT, 0666);
 			}
 			rc = fork();
@@ -38,10 +37,9 @@ int main(){
 				execvp(*cmd -> argv, cmd -> argv);
 				err("command not found", 1);
 			}
-			if(cmd -> next != NULL){
-				if(thisI != -1)	close(thisI);
-				if(thisO != -1)	close(thisO);
-			}
+			if(thisI != -1)	close(thisI);
+			if(thisO != -1)	close(thisO);
+			
 			cmd = cmd -> next;
 			thisI = thisO = -1;
 			if(nextI != -1){thisI = nextI; nextI = -1;}
