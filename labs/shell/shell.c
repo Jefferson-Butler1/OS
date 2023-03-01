@@ -28,7 +28,8 @@ int main(){
 				thisO = fds[1];
 				nextI = fds[0];
 			}else if(cmd -> outfile){
-				thisO = open(cmd -> outfile, O_WRONLY | O_CREAT, 0666);
+				thisO = open(cmd -> outfile, O_APPEND | O_WRONLY | O_CREAT, 0666);
+				if(thisO == -1) err("Bad destination", 1);
 			}
 			rc = fork();
 			if(rc == 0){
